@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Exercícios - Desenvolvimento Web I
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="site-header py-4">
+   <div class="container">
+    <p class="eyebrow mb-1">
+     DESENVOLVIMENTO WEB I
+    </p>
+    <h1 class="h3 mb-1">
+     Exercícios de formulários
+    </h1>
+    <p class="mb-0 opacity-75">
+     HTML, Bootstrap e JavaScript
+    </p>
+   </div>
+  </header>
+  <main class="container py-4 py-lg-5">
+   <nav aria-label="Exercícios" class="nav nav-pills gap-2 mb-4">
+    <a class="nav-link active" href="#academia">
+     01 · Academia
+    </a>
+    <a class="nav-link" href="#hotel">
+     02 · Hotel
+    </a>
+    <a class="nav-link" href="#camiseta">
+     03 · Camisetas
+    </a>
+   </nav>
+   <section class="exercise-card card shadow-sm mb-5" id="academia">
+    <div class="card-body p-4 p-lg-5">
+     <div class="section-heading">
+      <span class="number">
+       01
+      </span>
+      <div>
+       <h2 class="h4 mb-1">
+        Academia Vida Ativa
+       </h2>
+       <p class="text-secondary mb-0">
+        Cadastro de alunos e cálculo de mensalidade
+       </p>
+      </div>
+     </div>
+     <form id="formAcademia">
+      <div class="row g-3">
+       <div class="col-md-6">
+        <label class="form-label" for="nomeAluno">
+         Nome do aluno
+        </label>
+        <input class="form-control" id="nomeAluno" maxlength="40" placeholder="Digite seu nome"/>
+       </div>
+       <div class="col-md-6">
+        <label class="form-label" for="idade">
+         Idade
+         <span class="text-danger">
+          *
+         </span>
+        </label>
+        <input class="form-control" id="idade" max="100" min="14" placeholder="Informe a idade" required="" type="number"/>
+       </div>
+       <div class="col-12">
+        <label class="form-label" for="plano">
+         Plano desejado
+        </label>
+        <select class="form-select" id="plano">
+         <option value="100">
+          Musculação — R$ 100,00
+         </option>
+         <option value="130">
+          Funcional — R$ 130,00
+         </option>
+         <option value="180">
+          Completo — R$ 180,00
+         </option>
+        </select>
+       </div>
+       <fieldset class="col-12">
+        <legend class="form-label">
+         Período de treino
+        </legend>
+        <div class="d-flex flex-wrap gap-3">
+         <label class="form-check">
+          <input checked="" class="form-check-input" name="periodo" type="radio" value="Manhã"/>
+          <span class="form-check-label">
+           Manhã
+          </span>
+         </label>
+         <label class="form-check">
+          <input class="form-check-input" name="periodo" type="radio" value="Tarde"/>
+          <span class="form-check-label">
+           Tarde
+          </span>
+         </label>
+         <label class="form-check">
+          <input class="form-check-input" name="periodo" type="radio" value="Noite"/>
+          <span class="form-check-label">
+           Noite
+          </span>
+         </label>
+        </div>
+       </fieldset>
+       <fieldset class="col-12">
+        <legend class="form-label">
+         Serviços adicionais
+        </legend>
+        <div class="d-flex flex-wrap gap-3">
+         <label class="form-check">
+          <input class="form-check-input" id="personal" type="checkbox"/>
+          <span class="form-check-label">
+           Personal Trainer (+ R$ 80,00)
+          </span>
+         </label>
+         <label class="form-check">
+          <input class="form-check-input" id="avaliacao" type="checkbox"/>
+          <span class="form-check-label">
+           Avaliação Física (+ R$ 50,00)
+          </span>
+         </label>
+        </div>
+       </fieldset>
+      </div>
+      <div class="d-flex gap-2 mt-4">
+       <button class="btn btn-primary" type="submit">
+        Calcular Mensalidade
+       </button>
+       <button class="btn btn-outline-secondary" type="reset">
+        Limpar
+       </button>
+      </div>
+     </form>
+     <h3 class="h6 mt-4">
+      Valores dos planos
+     </h3>
+     <div class="table-responsive">
+      <table class="table table-striped align-middle">
+       <thead>
+        <tr>
+         <th scope="col">
+          Plano
+         </th>
+         <th scope="col">
+          Mensalidade
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          Musculação
+         </td>
+         <td>
+          R$ 100,00
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Funcional
+         </td>
+         <td>
+          R$ 130,00
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Completo
+         </td>
+         <td>
+          R$ 180,00
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </section>
+   <section class="exercise-card card shadow-sm mb-5" id="hotel">
+    <div class="card-body p-4 p-lg-5">
+     <div class="section-heading">
+      <span class="number">
+       02
+      </span>
+      <div>
+       <h2 class="h4 mb-1">
+        Hotel Bela Vista
+       </h2>
+       <p class="text-secondary mb-0">
+        Simulação de reserva de hospedagem
+       </p>
+      </div>
+     </div>
+     <form id="formHotel">
+      <div class="row g-3">
+       <div class="col-12">
+        <label class="form-label" for="nomeHospede">
+         Nome do hóspede
+         <span class="text-danger">
+          *
+         </span>
+        </label>
+        <input class="form-control" id="nomeHospede" maxlength="50" placeholder="Informe o nome completo" required=""/>
+       </div>
+       <div class="col-md-6">
+        <label class="form-label" for="entrada">
+         Data de entrada
+         <span class="text-danger">
+          *
+         </span>
+        </label>
+        <input class="form-control" id="entrada" required="" type="date"/>
+       </div>
+       <div class="col-md-6">
+        <label class="form-label" for="saida">
+         Data de saída
+         <span class="text-danger">
+          *
+         </span>
+        </label>
+        <input class="form-control" id="saida" required="" type="date"/>
+       </div>
+       <div class="col-md-8">
+        <label class="form-label" for="quarto">
+         Tipo de quarto
+        </label>
+        <select class="form-select" id="quarto">
+         <option value="200">
+          Standard — R$ 200,00 / diária
+         </option>
+         <option value="350">
+          Luxo — R$ 350,00 / diária
+         </option>
+         <option value="500">
+          Suíte — R$ 500,00 / diária
+         </option>
+        </select>
+       </div>
+       <div class="col-md-4">
+        <label class="form-label" for="hospedes">
+         Quantidade de hóspedes
+        </label>
+        <input class="form-control" id="hospedes" max="4" min="1" required="" type="number" value="2"/>
+       </div>
+       <fieldset class="col-12">
+        <legend class="form-label">
+         Serviços opcionais
+        </legend>
+        <div class="d-flex flex-wrap gap-3">
+         <label class="form-check">
+          <input class="form-check-input" id="cafe" type="checkbox"/>
+          <span class="form-check-label">
+           Café da manhã (+ R$ 30,00 por hóspede / diária)
+          </span>
+         </label>
+         <label class="form-check">
+          <input class="form-check-input" id="estacionamento" type="checkbox"/>
+          <span class="form-check-label">
+           Estacionamento (+ R$ 20,00 / diária)
+          </span>
+         </label>
+        </div>
+       </fieldset>
+       <div class="col-12">
+        <label class="form-label" for="observacoes">
+         Observações
+        </label>
+        <textarea class="form-control" id="observacoes" maxlength="200" placeholder="Digite suas observações..." rows="3"></textarea>
+       </div>
+      </div>
+      <div class="d-flex gap-2 mt-4">
+       <button class="btn btn-primary" type="submit">
+        Calcular Reserva
+       </button>
+       <button class="btn btn-outline-secondary" type="reset">
+        Limpar
+       </button>
+      </div>
+     </form>
+     <h3 class="h6 mt-4">
+      Tabela de diárias
+     </h3>
+     <div class="table-responsive">
+      <table class="table table-striped">
+       <thead>
+        <tr>
+         <th scope="col">
+          Quarto
+         </th>
+         <th scope="col">
+          Valor por diária
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          Standard
+         </td>
+         <td>
+          R$ 200,00
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Luxo
+         </td>
+         <td>
+          R$ 350,00
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Suíte
+         </td>
+         <td>
+          R$ 500,00
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </section>
+   <section class="exercise-card card shadow-sm" id="camiseta">
+    <div class="card-body p-4 p-lg-5">
+     <div class="section-heading">
+      <span class="number">
+       03
+      </span>
+      <div>
+       <h2 class="h4 mb-1">
+        Camisetas Criativas
+       </h2>
+       <p class="text-secondary mb-0">
+        Monte sua camiseta personalizada
+       </p>
+      </div>
+     </div>
+     <form id="formCamiseta">
+      <div class="row g-3">
+       <div class="col-12">
+        <label class="form-label" for="nomeCliente">
+         Nome do cliente
+        </label>
+        <input class="form-control" id="nomeCliente" maxlength="40" placeholder="Informe seu nome"/>
+       </div>
+       <div class="col-12">
+        <label class="form-label" for="textoCamiseta">
+         Texto da camiseta
+        </label>
+        <input class="form-control" id="textoCamiseta" maxlength="25" placeholder="Digite uma frase"/>
+       </div>
+       <div class="col-md-6">
+        <label class="form-label" for="tamanho">
+         Tamanho
+        </label>
+        <select class="form-select" id="tamanho">
+         <option>
+          P
+         </option>
+         <option selected="">
+          M
+         </option>
+         <option>
+          G
+         </option>
+         <option>
+          GG
+         </option>
+        </select>
+       </div>
+       <div class="col-md-6">
+        <label class="form-label" for="cor">
+         Cor da camiseta
+        </label>
+        <input class="form-control form-control-color w-100" id="cor" type="color" value="#2879c7"/>
+       </div>
+       <fieldset class="col-12">
+        <legend class="form-label">
+         Tipo de estampa
+        </legend>
+        <div class="d-flex flex-wrap gap-3">
+         <label class="form-check">
+          <input checked="" class="form-check-input" name="estampa" type="radio" value="15"/>
+          <span class="form-check-label">
+           Frente (+ R$ 15,00)
+          </span>
+         </label>
+         <label class="form-check">
+          <input class="form-check-input" name="estampa" type="radio" value="25"/>
+          <span class="form-check-label">
+           Frente e costas (+ R$ 25,00)
+          </span>
+         </label>
+        </div>
+       </fieldset>
+       <div class="col-12">
+        <div class="d-flex justify-content-between">
+         <label class="form-label" for="fonte">
+          Tamanho da fonte
+         </label>
+         <output for="fonte" id="valorFonte">
+          24 px
+         </output>
+        </div>
+        <input class="form-range" id="fonte" max="40" min="12" type="range" value="24"/>
+       </div>
+       <div class="col-12">
+        <label class="form-label" for="imagemEstampa">
+         Enviar imagem para estampa (JPG ou PNG)
+        </label>
+        <input accept=".jpg,.jpeg,.png,image/jpeg,image/png" class="form-control" id="imagemEstampa" type="file"/>
+       </div>
+      </div>
+      <h3 class="h6 mt-4">
+       Pré-visualização
+      </h3>
+      <div aria-label="Pré-visualização da camiseta" class="preview">
+       <div class="shirt-wrap">
+        <svg aria-label="Camiseta personalizada" class="shirt" role="img" viewbox="0 0 320 300">
+         <path d="M105 35 L135 20 Q160 53 185 20 L215 35 L282 91 L242 139 L213 121 L213 270 L107 270 L107 121 L78 139 L38 91 Z" fill="#2879c7" id="corCamiseta" stroke="#153e6c" stroke-linejoin="round" stroke-width="5">
+         </path>
+         <path d="M135 20 Q160 72 185 20" fill="none" stroke="#153e6c" stroke-width="4">
+         </path>
+         <foreignobject height="115" width="98" x="111" y="112">
+          <div class="shirt-print" xmlns="http://www.w3.org/1999/xhtml">
+           <img alt="Imagem da estampa" hidden="" id="imagemPreview"/>
+           <span id="frasePreview">
+            Minha frase
+           </span>
+          </div>
+         </foreignobject>
+        </svg>
+       </div>
+       <p class="small text-secondary mb-0" id="legendaPreview">
+        Exemplo de personalização · tamanho M
+       </p>
+      </div>
+      <div class="d-flex gap-2 mt-4">
+       <button class="btn btn-primary" id="visualizar" type="button">
+        Visualizar
+       </button>
+       <button class="btn btn-outline-primary" id="calcularPreco" type="button">
+        Calcular Preço
+       </button>
+       <button class="btn btn-outline-secondary" type="reset">
+        Limpar
+       </button>
+      </div>
+     </form>
+    </div>
+   </section>
+   <p class="text-center small text-secondary mt-4">
+    Atividades práticas de Desenvolvimento Web I · Bootstrap 5
+   </p>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script defer="" src="script.js">
+  </script>
+ </body>
+</html>
+
